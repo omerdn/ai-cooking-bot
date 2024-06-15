@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(img/wallhaven-45xdd8.jpg);
+    background-size: 100% auto;
+}
+
+#header {
+    padding: 20px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#header  h1 {
+    font-size: 35px;
+    margin:0px;
+    padding:0px;
+}
+
+#content {
+    background: rgba(0, 0, 0, 0.81);
+    padding: 30px;
+    width: 60%;
+    max-height: 800px;
+    height: 800px;
+    overflow: auto;
+    border-radius: 15px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+}
+
+input {
+    background:rgb(240, 240, 240);
+    padding: 20px;
+    border-radius: 20px;
+    color: rgb(43, 41, 41);
+    font-weight: bold;
+    border: none;
+    width: 600px;
+}
+
+input:focus {
+    outline:none;
+}
+
+#sendButton {
+    border-radius: 200px;
+    padding: 10px;
+    background:rgba(27, 27, 27, 0);
+    width: 40px;
+    height: 40px;
+    background-image: url(img/buton.png);
+    background-size: contain;
+    border: none;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.inputfieldFloater {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    margin-top:10px;
+}
+
+#container_user {
+    background-color: rgba(90, 82, 78, 0.815);
+    padding: 20px;
+    margin: 2px 0px 2px 20px;
+    color: white;
+    width: max-content;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+#container_bot {
+    background-color: rgba(126, 41, 41, 0.815);
+    padding: 20px;
+    margin: 2px 20px 2px 0px;
+    color: white;
+    width: max-content;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+#container_bot > img {
+    width: 15px;
+    position:relative;
+    bottom: 8px;
+    filter: opacity(55%);
+    float: right;
+    margin-left: 20px;
+}
+
+#container_bot > img:hover {
+    filter: opacity(100%);
+    cursor: pointer;
+}
+
+#contentBox {
+    height: auto;
+    overflow: auto;
+    padding: 0px 35px;
+}
+
+#seperator {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+#favorite_section {
+    max-height: 800px;
+    height: 800px;
+    overflow: auto;
+    border-radius: 15px;
+}
+
+#favorite_box {
+    margin: 0px 15px 15px 0px;
+    background: rgba(0, 0, 0, 0.81);
+    border-radius: 15px;
+    padding: 15px;
+    height: 120px;
+    max-width: 150px;
+    box-shadow: none;
+    transition: box-shadow 0.5s;
+    color: white;
+}
+
+.favsectionbuttons {
+    display:flex;
+    flex-direction: column;
+}
+
+#zoomin {
+    margin-top: 10px;
+}
+
+.favoriteFlex {
+    display: flex;
+}
+
+.textoverflow {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: clip;
+    user-select:none;
+}
+
+#favorite_box:hover {
+    box-shadow: rgba(214, 205, 205, 0.25) 0px 13px 27px -5px, rgba(214, 205, 205, 0.3) 0px 8px 16px -8px;
+    transition: box-shadow 0.5s;
+}
+
+.favsectionbuttons > img {
+    filter: invert(55%) sepia(0%) saturate(606%) hue-rotate(237deg) brightness(90%) contrast(83%);
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.favsectionbuttons > img:hover {
+    filter:invert(13%) sepia(50%) saturate(6459%) hue-rotate(354deg) brightness(92%) contrast(96%);
+}
+
+.user > img {
+    margin: 10px;
+    height: 40px;
+}
+
+.bot > img {
+    margin: 10px;
+    height: 55px;
+}
+
+#userBOX {
+    display:flex;
+    margin-top: 15px;
+}
+
+#favoriteRecipe_full {
+    background-color: rgba(0, 0, 0, 0.868);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 999;
+    text-align: center;
+    display:none;
+}
+
+#favoriteRecipe_recipebox {
+    background-color: rgb(255, 246, 246);
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    width: 60%;
+    height: auto;
+    top: 30%;
+    position: relative;
+    padding: 30px;
+    box-shadow: rgba(54, 54, 54, 0.822) 0px 13px 27px -5px;
+    font-family: 'Roboto', sans-serif;
+    z-index: 1000;
+    text-align: left;
+    margin: auto auto;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between
+}
+
+#closeButton {
+    filter: invert(55%) sepia(0%) saturate(606%) hue-rotate(237deg) brightness(90%) contrast(83%);
+    cursor: pointer;
+}
+
+#closeButton:hover {
+    filter:invert(13%) sepia(50%) saturate(6459%) hue-rotate(354deg) brightness(92%) contrast(96%);
+}
+
+#loadingScreen {
+    background-color: rgba(41, 34, 25, 0.868);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 999;
+    text-align: center;
+    display:none;
+}
+
+#loadingScreen > img {
+    position: relative;
+    top: 30%;
+}
